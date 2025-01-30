@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #181A1B;
+    color: #fff;
+}
+
+.upload-container {
+    text-align: center;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+}
+
+#drop-area {
+    border: 2px dashed #555;
+    padding: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #282C30;
+}
+
+#file-label {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#file-name {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #bbb;
+    text-align: center;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}

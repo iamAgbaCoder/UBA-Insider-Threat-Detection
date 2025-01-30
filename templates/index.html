@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> UBA (User Behaviour Analytics) Insider Threat Detection Software </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/iostyle.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/iotheme29.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/upload.css') }}">
+</head>
+<body>
+    <div class="form-body without-side">
+        <div class="website-logo">
+            <a href="/">
+                <div class="logo">
+                    <img class="logo-size" src="{{ url_for('static', filename='images/logo-light.svg') }}" alt="">
+                </div>
+            </a>
+        </div>
+        <div class="iofrm-layout">
+            <div class="img-holder">
+                <div class="bg"></div>
+                <div class="info-holder">
+                    <img src="{{ url_for('static', filename='images/graphic3.svg') }}" alt="">
+                </div>
+            </div>
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>Upload User Logs</h3>
+                        <p>Analyze session behavior and detect insider threats in real-time.</p>
+                        <form action="/upload" method="post" enctype="multipart/form-data">
+                            <!-- <input class="form-control" type="text" name="username" placeholder="E-mail Address" required> -->
+                            <!-- <input type="file" name="file" accept=".csv,.json" required> -->
+                            <div id="drop-area">
+                                <input type="file" name="file" id="fileElem" accept=".csv,.json" required hidden>
+                                <center>
+                                  <label for="fileElem" id="file-label">Choose a file</label>
+                                  <p id="file-name">Drag and drop file here</p>
+                                </center>
+                            </div>
+                            <div class="form-button">
+                                <button id="submit" type="submit" class="ibtn">Upload</button>
+                            </div>
+                        </form>
+                        <div class="other-links social-with-title">
+                            <div class="text">Need help? <a href="mailto:dev@example.com">Contact Developer</a></div>
+                            <a href="https://www.facebook.com/iamAgbaCoder"><i class="fab fa-facebook-f"></i>Facebook</a><a href="https://github.com/iamAgbaCoder"><i class="fab fa-github"></i>Google</a><a href="https://www.linkedin.com/in/iamagbacoder/"><i class="fab fa-linkedin-in"></i>Linkedin</a>
+                        </div>
+                        <!-- <div class="page-links">
+                            <a href="register25.html">Register new account</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
