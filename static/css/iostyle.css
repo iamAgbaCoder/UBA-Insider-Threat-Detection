@@ -16,12 +16,13 @@
 2. Responsive Styles.
 -------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;600&display=swap");
 /* -----------------------------------
     1 - General Styles
 ------------------------------------*/
 *, body {
-    font-family: "Lato", sans-serif;
-    font-weight: 400;
+    font-family: 'Bricolage Grotesque', "Lato", sans-serif;
+    /* font-weight: 400; */
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
@@ -72,7 +73,7 @@ html, body {
 
 .website-logo .logo {
     display: inline-block;
-    background-image: url("../images/logo-light.svg");
+    background-image: url("../images/logo-light.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -99,7 +100,7 @@ html, body {
 
 .website-logo-inside .logo {
     display: inline-block;
-    background-image: url("../images/logo-light.svg");
+    background-image: url("../images/logo-light.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -839,6 +840,7 @@ html, body {
 .form-content .form-button {
     margin-top: 0.9rem;
     margin-bottom: 1.5rem;
+    align-items: center;
 }
 
 .form-content .form-button.d-flex > * {
@@ -1568,7 +1570,7 @@ input.sm-content {
 }
 
 .form-body.without-side .website-logo-inside .logo {
-    background-image: url("../images/logo-dark.svg");
+    /* background-image: url("../images/logo-dark.svg"); */
 }
 
 .form-body.without-side .form-holder .form-content ::-webkit-input-placeholder {
@@ -2124,7 +2126,7 @@ input.sm-content {
     }
 
     .website-logo .logo {
-        background-image: url("../images/logo-light.svg");
+        background-image: url("../images/logo-light.png");
     }
 
     .form-body.without-side .img-holder {
@@ -2132,7 +2134,7 @@ input.sm-content {
     }
 
     .form-body.without-side .website-logo .logo {
-        background-image: url("../images/logo-light.svg");
+        background-image: url("../images/logo-light.png");
     }
 
     .form-body.without-side .form-holder .form-content {

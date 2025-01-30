@@ -35,7 +35,7 @@ body {
 }
 
 .website-logo .logo {
-    background-image: url("../images/logo-light.svg");
+    background-image: url("../images/logo-light.png");
 }
 
 .website-logo .logo img {
@@ -47,7 +47,7 @@ body {
 }
 
 .website-logo-inside .logo {
-    background-image: url("../images/logo-light.svg");
+    background-image: url("../images/logo-light.png");
 }
 
 .website-logo-inside .logo img {
@@ -470,7 +470,7 @@ body {
 }
 
 .form-body.without-side .website-logo-inside .logo {
-    background-image: url("../images/logo-light.svg");
+    background-image: url("../images/logo-light.png");
 }
 
 .form-body.without-side h3 {
@@ -627,6 +627,6 @@ body {
     }
 
     .form-body.without-side .website-logo .logo {
-        background-image: url("../images/logo-light.svg");
+        background-image: url("../images/logo-light.png");
     }
 }
