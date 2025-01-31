@@ -12,7 +12,7 @@ if __name__ == "__main__":
         model = pickle.load(f)
 
     # Load and preprocess data
-    logs = load_data("../data/user_logs.csv")
+    logs = load_data("../data/user_session_logs.csv")
     features, logs_with_features = preprocess_data(logs)
 
     # Detect anomalies

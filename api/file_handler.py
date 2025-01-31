@@ -20,7 +20,7 @@ def allowed_file(filename):
 # Route to handle file upload
 @file_api.route('/upload', methods=['POST'])
 def upload_file():
-    # from api.analyzer import analyze_file  # 🔥 Import inside function to prevent circular import
+    from api.analyzer import analyze_file  # 🔥 Import inside function to prevent circular import
 
     if 'file' not in request.files:
         return jsonify({'error': 'No File Uploaded'}), 400
@@ -38,6 +38,6 @@ def upload_file():
         # Call analysis function
         analysis_result = analyze_file(filepath)
 
-        return jsonify({'message': 'File Uploaded Successfully', 'analysis': analysis_result}), 200
+        return jsonify({'message': 'File Uploaded Successfully', 'data': analysis_result}), 200
 
     return jsonify({'error': 'Invalid File Type'}), 400

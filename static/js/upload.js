@@ -59,6 +59,7 @@ function uploadFile() {
             showAlert(errorContainer, data.error, "danger", "Error");  // Show error message
         } else {
             showAlert(successContainer, "File uploaded successfully!", "success", "Success");
+            localStorage.setItem("anomaliesData", JSON.stringify(data.data));  // Store data in browser storage
             setTimeout(() => {
                 window.location.href = "/results";  // Redirect to results page
             }, 2000);
