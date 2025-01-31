@@ -23,9 +23,6 @@
                 </div>
             </a>
         </div>
-        
-        <div id="errorContainer"></div> <!-- Error Messages -->
-        <div id="successContainer"></div> <!-- Success Messages -->
 
         <div class="iofrm-layout">
             <div class="img-holder">
@@ -37,16 +34,18 @@
             <div class="form-holder">
                 <div class="form-content">
                     <div class="form-items">
+                      <div id="errorContainer"></div> <!-- Error Messages -->
+                      <div id="successContainer"></div> <!-- Success Messages -->
                         <h3>Upload User Logs</h3>
                         <p>Analyze session behavior and detect insider threats in real-time.</p>
-                        <form action="/api/upload" method="post" enctype="multipart/form-data">
+                        <form id="uploadForm" enctype="multipart/form-data">
                             <!-- <input class="form-control" type="text" name="username" placeholder="E-mail Address" required> -->
                             <!-- <input type="file" name="file" accept=".csv,.json" required> -->
                             <div id="drop-area">
-                                <input type="file" name="file" id="fileElem" accept=".csv,.json" required hidden>
+                                <input type="file" name="file" id="fileElem" required hidden>
                                 <center>
                                   <label for="fileElem" id="file-label">Choose a file</label>
-                                  <p id="file-name">Drag and drop file here</p>
+                                  <p id="file-name">Drag and drop file here <br/>(.csv, .json)</p>
                                 </center>
                             </div>
                             <div class="form-button">
