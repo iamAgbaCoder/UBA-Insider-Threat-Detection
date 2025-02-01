@@ -49,21 +49,31 @@ function uploadFile() {
     let formData = new FormData();
     formData.append("file", fileInput.files[0]);
 
+    showAlert(successContainer, "Fetching trained ML model... Please wait!", "success", "Processing");
+
     fetch("/api/upload", {
         method: "POST",
         body: formData
     })
     .then(response => response.json())
     .then(data => {
-        if (data.error) {
-            showAlert(errorContainer, data.error, "danger", "Error");  // Show error message
-        } else {
-            showAlert(successContainer, "File uploaded successfully!", "success", "Success");
-            localStorage.setItem("anomaliesData", JSON.stringify(data.data));  // Store data in browser storage
-            setTimeout(() => {
-                window.location.href = "/results";  // Redirect to results page
-            }, 2000);
-        }
+        setTimeout(() => {
+            showAlert(successContainer, "Analyzing with our ML model. Almost done!", "success", "Processing");
+        }, 4000);
+
+        setTimeout(() => {
+            if (data.error) {
+                showAlert(errorContainer, data.error, "danger", "Error"); // Show error message
+            } else {
+                showAlert(successContainer, "File processed successfully! Analysis complete. Redirecting...", "success", "Success");
+
+                localStorage.setItem("anomaliesData", JSON.stringify(data.data)); // Store data in browser storage
+
+                setTimeout(() => {
+                    window.location.href = "/api/results/chart"; // Redirect to results page
+                }, 5000);
+            }
+        }, 7000); // Ensuring enough delay for processing before handling the response
     })
     .catch(error => {
         showAlert(errorContainer, "Upload failed. Try again.", "danger", "Error");

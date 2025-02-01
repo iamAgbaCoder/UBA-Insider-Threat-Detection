@@ -17,13 +17,20 @@ from sklearn.ensemble import IsolationForest
 
 # Define possible column name variations
 COLUMN_MAPPING = {
-    "timestamp": ["timestamp", "time", "date_time"],
+    "timestamp": ["timestamp", "time", "date_time", "activity_timestamp"],
     "session_duration": ["session_duration", "duration", "time_spent"],
     "failed_logins": ["failed_logins", "status", "login_attempts"],
     "resource_access_count": ["resource_access_count", "page_views", "resource_used"],
     "is_admin": ["is_admin", "admin_flag", "role_admin"],
     "ip_address": ["ip_address", "source_ip", "client_ip"],
+    "user_id": ["user_id", "id", "gaia_id"],
+    "username": ["username", "user_name", "account_name"],
+    "email": ["email", "user_email", "contact_email"],
+    "device_type": ["device_type", "device", "user_device"],
+    "location": ["location", "geo_location", "user_location"],
+    "action": ["action", "user_action", "activity_type"],
 }
+
 
 def load_file(file_path):
     """Load the log data from a CSV file."""
